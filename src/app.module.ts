@@ -17,6 +17,7 @@ import DatabaseModule from './database/database.module';
 import EnvironmentModule from './environment/environment.module';
 import { TraceIDMiddleware } from './infrastructure/middlewares/trace-id-middleware';
 import { AuthMiddleware } from './infrastructure/middlewares/auth.middleware';
+import { BikerRegistrationModule } from './parking/registration/biker-registration.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { AuthMiddleware } from './infrastructure/middlewares/auth.middleware';
     AuthModule,
     DatabaseModule,
     EnvironmentModule,
+    BikerRegistrationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
