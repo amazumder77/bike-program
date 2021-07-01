@@ -4,7 +4,7 @@ import { GetContentDto } from '../dto/get-content.dto';
 import { PartialMock } from '../../@types/helpers.s';
 import { Request } from 'express';
 import { SearchContentDto } from '../dto/search-content.dto';
-import { SearchContentQueryDto } from '../dto/search-content-query.dto';
+import { SearchBikerRegistrationQueryDto } from '../dto/search-biker-registration.dto';
 import { Test } from '@nestjs/testing';
 import { TypeEnum } from '../enums/type.enum';
 import { createUniversalMock } from '@hqo/shared-modules/dist';
@@ -98,7 +98,7 @@ describe('Content Controller', () => {
 
   describe('searchContents', () => {
     it('should get searched contents', async (): Promise<void> => {
-      const searchContentQueryDto = {} as SearchContentQueryDto;
+      const searchContentQueryDto = {} as SearchBikerRegistrationQueryDto;
       const searchContentDto = {} as SearchContentDto;
       await contentController.search('testRequest' as unknown as Request, searchContentQueryDto, searchContentDto);
       expect(contentServiceMock.search).toHaveBeenCalledWith('testRequest', searchContentQueryDto, searchContentDto);

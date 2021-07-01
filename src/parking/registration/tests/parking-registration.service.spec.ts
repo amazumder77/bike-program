@@ -13,7 +13,7 @@ import { PartialMock } from '../../@types/helpers.s';
 import { Request } from 'express';
 import { Response } from '../../shared/interfaces/standard-response.interface';
 import { SearchContentDto } from '../dto/search-content.dto';
-import { SearchContentQueryDto } from '../dto/search-content-query.dto';
+import { SearchBikerRegistrationQueryDto } from '../dto/search-biker-registration.dto';
 import { TranslationService } from '../../translation-service/translation.service';
 import { TypeEnum } from '../enums/type.enum';
 import { createUniversalMock } from '@hqo/shared-modules/dist';
@@ -214,7 +214,7 @@ describe('ContentService', () => {
         uuid: contentEntity.uuid,
       });
 
-      expect(await contentService.create('testRequest' as unknown as Request, createOrUpdateContentRequestDto));
+      expect(await contentService.registerBiker('testRequest' as unknown as Request, createOrUpdateContentRequestDto));
 
       expect(translationServiceMock.create).toHaveBeenCalledTimes(1);
       expect(contentRepositoryMock.save).toHaveBeenCalledTimes(1);
@@ -228,7 +228,7 @@ describe('ContentService', () => {
       contentRepositoryMock.findOne.mockReturnValueOnce(null);
       contentRepositoryMock.save.mockReturnValueOnce(contentEntity);
 
-      expect(await contentService.create('testRequest' as unknown as Request, contentDataWithUuid));
+      expect(await contentService.registerBiker('testRequest' as unknown as Request, contentDataWithUuid));
 
       expect(translationServiceMock.create).toHaveBeenCalledTimes(1);
       expect(contentRepositoryMock.save).toHaveBeenCalledTimes(1);
@@ -244,7 +244,7 @@ describe('ContentService', () => {
       };
       contentRepositoryMock.findOne.mockReturnValueOnce(contentEntity);
 
-      await expect(contentService.create('testRequest' as unknown as Request, contentDataWithUuid)).rejects.toThrow(
+      await expect(contentService.registerBiker('testRequest' as unknown as Request, contentDataWithUuid)).rejects.toThrow(
         BadRequestException,
       );
 
@@ -256,7 +256,7 @@ describe('ContentService', () => {
       const createContentRequestDtoTemp = createOrUpdateContentRequestDto;
       createContentRequestDtoTemp.translations = {};
       await expect(
-        contentService.create('testRequest' as unknown as Request, createContentRequestDtoTemp),
+        contentService.registerBiker('testRequest' as unknown as Request, createContentRequestDtoTemp),
       ).rejects.toThrow(Error);
     });
 
@@ -265,7 +265,7 @@ describe('ContentService', () => {
         throw Error();
       });
       await expect(
-        contentService.create('testRequest' as unknown as Request, createOrUpdateContentRequestDto),
+        contentService.registerBiker('testRequest' as unknown as Request, createOrUpdateContentRequestDto),
       ).rejects.toThrow(Error);
     });
   });
@@ -357,7 +357,7 @@ describe('ContentService', () => {
     const url_uuid = 'url_uuid1';
     const directions_uuid = 'directions_uuid1';
     const locale = 'en-us';
-    const searchContentQueryDto: SearchContentQueryDto = {
+    const searchContentQueryDto: SearchBikerRegistrationQueryDto = {
       lang: ['en_US'],
     };
     const searchContentDto: SearchContentDto = {

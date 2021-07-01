@@ -1,49 +1,61 @@
-import { IsString, IsOptional, IsUUID, IsNotEmpty, IsNumber, IsEmail, IsMobilePhone, IsBoolean } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
+import { IsString, IsOptional, IsNotEmpty, IsNumber, IsEmail, IsMobilePhone, IsBoolean } from 'class-validator';
 
 export class BikerRegistrationDto {
 
+  @ApiProperty()
   @IsString()
   @IsNotEmpty()
   first_name: string;
 
-  // @IsString()
-  // @IsNotEmpty()
-  // last_name: string;
+  @ApiProperty()
+  @IsString()
+  @IsNotEmpty()
+  last_name: string;
 
-  // @IsMobilePhone()
-  // @IsNotEmpty()
-  // phone: string;
+  @ApiProperty()
+  @IsMobilePhone()
+  @IsNotEmpty()
+  phone: string;
 
-  // @IsEmail()
-  // @IsNotEmpty()
-  // email: string;
+  @ApiProperty()
+  @IsEmail()
+  @IsNotEmpty()
+  email: string;
 
-  // @IsNumber()
-  // @IsNotEmpty()
-  // building_id: number;
+  @ApiProperty()
+  @IsNumber()
+  @IsNotEmpty()
+  building_id: number;
 
-  // @IsString()
-  // @IsOptional()
-  // company?: string;
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  company?: string;
 
-  // @IsBoolean()
-  // @IsOptional()
-  // is_tenant?: boolean;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  is_tenant?: boolean;
 
-  // @IsBoolean()
-  // @IsOptional()
-  // is_admin?: boolean;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  is_admin?: boolean;
 
-  // @IsBoolean()
-  // @IsOptional()
-  // is_visitor?: boolean;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  is_visitor?: boolean;
 
-  // @IsBoolean()
-  // @IsOptional()
-  // is_verified?: boolean;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  is_verified?: boolean;
 
-  // @IsBoolean()
-  // @IsOptional()
-  // has_building_access?: boolean;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  has_building_access?: boolean;
 
 }

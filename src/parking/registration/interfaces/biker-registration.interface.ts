@@ -1,5 +1,5 @@
-import { BikerRegistrationDto } from '../dto/biker-registration.dto';
+import { BikerDto } from '../dto/biker-registration.dto';
 
 export interface BikerRegistrationRO {
-  registration: Array<BikerRegistrationDto>;
+  registration: Array<BikerDto>;
 }

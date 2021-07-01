@@ -659,10 +659,10 @@
     "@types/jsonwebtoken" "8.5.0"
     jsonwebtoken "8.5.1"
 
-"@nestjs/mapped-types@0.4.0":
-  version "0.4.0"
-  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@nestjs/mapped-types/-/mapped-types-0.4.0.tgz#352b9a661d6d36863cf48b2057616cef1b2c802d"
-  integrity sha1-NSuaZh1tNoY89IsgV2Fs7xssgC0=
+"@nestjs/mapped-types@0.4.1":
+  version "0.4.1"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@nestjs/mapped-types/-/mapped-types-0.4.1.tgz#e7fe038f0bdda7b8f858fa79ca8516b8f9069b1a"
+  integrity sha1-5/4Djwvdp7j4WPp5yoUWuPkGmxo=
 
 "@nestjs/passport@7.1.5":
   version "7.1.5"
@@ -691,12 +691,12 @@
     jsonc-parser "3.0.0"
     pluralize "8.0.0"
 
-"@nestjs/swagger@4.8.0":
-  version "4.8.0"
-  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@nestjs/swagger/-/swagger-4.8.0.tgz#7ebfeb0d59e0c27ff40beb429d7311b752c0dca4"
-  integrity sha1-fr/rDVngwn/0C+tCnXMRt1LA3KQ=
+"@nestjs/swagger@^4.8.0":
+  version "4.8.2"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@nestjs/swagger/-/swagger-4.8.2.tgz#0a0b3ca1b25146e797ca77addd9fa97f82406c1c"
+  integrity sha1-Cgs8obJRRueXynet3Z+pf4JAbBw=
   dependencies:
-    "@nestjs/mapped-types" "0.4.0"
+    "@nestjs/mapped-types" "0.4.1"
     lodash "4.17.21"
     path-to-regexp "3.2.0"
 
@@ -936,6 +936,16 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/bluebird@*":
+  version "3.5.35"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/bluebird/-/bluebird-3.5.35.tgz#3964c48372bf62d60616d8673dd77a9719ebac9b"
+  integrity sha1-OWTEg3K/YtYGFthnPdd6lxnrrJs=
+
+"@types/bluebird@3.5.18":
+  version "3.5.18"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/bluebird/-/bluebird-3.5.18.tgz#6a60435d4663e290f3709898a4f75014f279c4d6"
+  integrity sha1-amBDXUZj4pDzcJiYpPdQFPJ5xNY=
+
 "@types/body-parser@*":
   version "1.19.0"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/body-parser/-/body-parser-1.19.0.tgz#0685b3c47eb3006ffed117cdd55164b61f80538f"
@@ -948,6 +958,13 @@
   version "3.4.34"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/connect/-/connect-3.4.34.tgz#170a40223a6d666006d93ca128af2beb1d9b1901"
   integrity sha1-FwpAIjptZmAG2TyhKK8r6x2bGQE=
+  dependencies:
+    "@types/node" "*"
+
+"@types/continuation-local-storage@*":
+  version "3.2.3"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/continuation-local-storage/-/continuation-local-storage-3.2.3.tgz#e4d5b5fddae1a432b78d19d48875c7e297f566e2"
+  integrity sha1-5NW1/drhpDK3jRnUiHXH4pf1ZuI=
   dependencies:
     "@types/node" "*"
 
@@ -1011,6 +1028,16 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/geojson@^1.0.0":
+  version "1.0.6"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/geojson/-/geojson-1.0.6.tgz#3e02972728c69248c2af08d60a48cbb8680fffdf"
+  integrity sha1-PgKXJyjGkkjCrwjWCkjLuGgP/98=
+
+"@types/geojson@^7946.0.0 || ^1.0.0":
+  version "7946.0.7"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/geojson/-/geojson-7946.0.7.tgz#c8fa532b60a0042219cdf173ca21a975ef0666ad"
+  integrity sha1-yPpTK2CgBCIZzfFzyiGpde8GZq0=
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/graceful-fs/-/graceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
@@ -1069,6 +1096,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/lodash@*":
+  version "4.14.170"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/lodash/-/lodash-4.14.170.tgz#0d67711d4bf7f4ca5147e9091b847479b87925d6"
+  integrity sha1-DWdxHUv39MpRR+kJG4R0ebh5JdY=
+
 "@types/long@^4.0.1":
   version "4.0.1"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/long/-/long-4.0.1.tgz#459c65fa1867dafe6a8f322c4c51695663cc55e9"
@@ -1098,6 +1130,11 @@
   version "15.3.1"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/node/-/node-15.3.1.tgz#23a06b87eedb524016616e886b116b8fdcb180af"
   integrity sha1-I6Brh+7bUkAWYW6IaxFrj9yxgK8=
+
+"@types/node@6.0.41":
+  version "6.0.41"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/node/-/node-6.0.41.tgz#578cf53aaec65887bcaf16792f8722932e8ff8ea"
+  integrity sha1-V4z1Oq7GWIe8rxZ5L4ciky6P+Oo=
 
 "@types/node@^10.12.18":
   version "10.17.60"
@@ -1153,6 +1190,16 @@
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/range-parser/-/range-parser-1.2.3.tgz#7ee330ba7caafb98090bece86a5ee44115904c2c"
   integrity sha1-fuMwunyq+5gJC+zoal7kQRWQTCw=
 
+"@types/sequelize@4.27.24":
+  version "4.27.24"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/sequelize/-/sequelize-4.27.24.tgz#7d593c062c368f570c68b0217f5c1d4c892ead48"
+  integrity sha1-fVk8Biw2j1cMaLAhf1wdTIkurUg=
+  dependencies:
+    "@types/bluebird" "*"
+    "@types/continuation-local-storage" "*"
+    "@types/lodash" "*"
+    "@types/validator" "*"
+
 "@types/serve-static@*":
   version "1.13.9"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/serve-static/-/serve-static-1.13.9.tgz#aacf28a85a05ee29a11fb7c3ead935ac56f33e4e"
@@ -1195,6 +1242,11 @@
   version "8.3.0"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/uuid/-/uuid-8.3.0.tgz#215c231dff736d5ba92410e6d602050cce7e273f"
   integrity sha1-IVwjHf9zbVupJBDm1gIFDM5+Jz8=
+
+"@types/validator@*":
+  version "13.1.4"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/@types/validator/-/validator-13.1.4.tgz#d2e3c27523ce1b5d9dc13d16cbce65dc4db2adbe"
+  integrity sha1-0uPCdSPOG12dwT0Wy85l3E2yrb4=
 
 "@types/validator@^13.1.3":
   version "13.1.3"
@@ -1869,7 +1921,7 @@ bluebird@^2.9.21:
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/bluebird/-/bluebird-2.11.0.tgz#534b9033c022c9579c56ba3b3e5a5caafbb650e1"
   integrity sha1-U0uQM8AiyVecVro7Plpcqvu2UOE=
 
-bluebird@^3.7.2:
+bluebird@^3.4.6, bluebird@^3.5.0, bluebird@^3.7.2:
   version "3.7.2"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha1-nyKcFb4nJFT/qXOs4NvueaGww28=
@@ -2229,6 +2281,14 @@ clone@^1.0.2:
   version "1.0.4"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
+
+cls-bluebird@^2.1.0:
+  version "2.1.0"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/cls-bluebird/-/cls-bluebird-2.1.0.tgz#37ef1e080a8ffb55c2f4164f536f1919e7968aee"
+  integrity sha1-N+8eCAqP+1XC9BZPU28ZGeeWiu4=
+  dependencies:
+    is-bluebird "^1.0.2"
+    shimmer "^1.1.0"
 
 cluster-key-slot@^1.1.0:
   version "1.1.0"
@@ -2601,7 +2661,7 @@ debug@4, debug@4.3.1, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, de
   dependencies:
     ms "2.1.2"
 
-debug@^3.2.7:
+debug@^3.1.0, debug@^3.2.7:
   version "3.2.7"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
   integrity sha1-clgLfpFF+zm2Z2+cXl+xALk0F5o=
@@ -2812,6 +2872,11 @@ dotenv@^8.1.0, dotenv@^8.2.0:
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
   integrity sha1-Bhr2ZNGff02PxuT/m1hM4jety4s=
 
+dottie@^2.0.0:
+  version "2.0.2"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/dottie/-/dottie-2.0.2.tgz#cc91c0726ce3a054ebf11c55fbc92a7f266dd154"
+  integrity sha1-zJHAcmzjoFTr8RxV+8kqfyZt0VQ=
+
 durations@~1:
   version "1.0.2"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/durations/-/durations-1.0.2.tgz#7e80e3765c9c266f7e05c2977c19d1d5ce4cd6b1"
@@ -2964,6 +3029,11 @@ es-to-primitive@^1.2.1:
     is-callable "^1.1.4"
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
+
+es6-shim@0.35.3:
+  version "0.35.3"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/es6-shim/-/es6-shim-0.35.3.tgz#9bfb7363feffff87a6cdb6cd93e405ec3c4b6f26"
+  integrity sha1-m/tzY/7//4emzbbNk+QF7DxLbyY=
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -3590,6 +3660,11 @@ generic-names@^2.0.1:
   dependencies:
     loader-utils "^1.1.0"
 
+generic-pool@3.5.0:
+  version "3.5.0"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/generic-pool/-/generic-pool-3.5.0.tgz#acac4fd743a175ff20574f380910036464cb61f7"
+  integrity sha1-rKxP10Ohdf8gV084CRADZGTLYfc=
+
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
@@ -3654,6 +3729,18 @@ glob-to-regexp@^0.4.1:
   version "0.4.1"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
   integrity sha1-x1KXCHyFG5pXi9IX3VmpL1n+VG4=
+
+glob@7.1.2:
+  version "7.1.2"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
+  integrity sha1-wZyd+aAocC1nhhI4SmVSQExjbRU=
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.4"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
 
 glob@^7.0.0, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
   version "7.1.7"
@@ -3942,6 +4029,11 @@ indent-string@^2.1.0:
   dependencies:
     repeating "^2.0.0"
 
+inflection@1.12.0:
+  version "1.12.0"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/inflection/-/inflection-1.12.0.tgz#a200935656d6f5f6bc4dc7502e1aecb703228416"
+  integrity sha1-ogCTVlbW9fa8TcdQLhrstwMihBY=
+
 inflight@^1.0.4:
   version "1.0.6"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
@@ -4069,6 +4161,11 @@ is-binary-path@~2.1.0:
   integrity sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=
   dependencies:
     binary-extensions "^2.0.0"
+
+is-bluebird@^1.0.2:
+  version "1.0.2"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/is-bluebird/-/is-bluebird-1.0.2.tgz#096439060f4aa411abee19143a84d6a55346d6e2"
+  integrity sha1-CWQ5Bg9KpBGr7hkUOoTWpVNG1uI=
 
 is-boolean-object@^1.1.0:
   version "1.1.1"
@@ -5128,7 +5225,7 @@ lodash.uniq@^4.5.0:
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4.17.15, lodash@4.17.21, lodash@4.x, lodash@^3.6.0, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
+lodash@4.17.15, lodash@4.17.21, lodash@4.x, lodash@^3.6.0, lodash@^4.17.1, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -5403,14 +5500,14 @@ module-details-from-path@^1.0.3:
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/module-details-from-path/-/module-details-from-path-1.0.3.tgz#114c949673e2a8a35e9d35788527aa37b679da2b"
   integrity sha1-EUyUlnPiqKNenTV4hSeqN7Z52is=
 
-moment-timezone@0.5.33:
+moment-timezone@0.5.33, moment-timezone@^0.5.14:
   version "0.5.33"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/moment-timezone/-/moment-timezone-0.5.33.tgz#b252fd6bb57f341c9b59a5ab61a8e51a73bbd22c"
   integrity sha1-slL9a7V/NBybWaWrYajlGnO70iw=
   dependencies:
     moment ">= 2.9.0"
 
-moment@2.29.1, "moment@>= 2.9.0":
+moment@2.29.1, "moment@>= 2.9.0", moment@^2.20.0:
   version "2.29.1"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
   integrity sha1-sr52n6MZQL6e7qZGnAdeNQBvo9M=
@@ -6610,6 +6707,14 @@ ret@~0.1.10:
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha1-uKSCXVvbH8P29Twrwz+BOIaBx7w=
 
+retry-as-promised@^2.3.2:
+  version "2.3.2"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/retry-as-promised/-/retry-as-promised-2.3.2.tgz#cd974ee4fd9b5fe03cbf31871ee48221c07737b7"
+  integrity sha1-zZdO5P2bX+A8vzGHHuSCIcB3N7c=
+  dependencies:
+    bluebird "^3.4.6"
+    debug "^2.6.9"
+
 retry-axios@2.4.0:
   version "2.4.0"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/retry-axios/-/retry-axios-2.4.0.tgz#b5da2afed8dd0134c73c86206e1d1881d7c66a67"
@@ -6800,6 +6905,40 @@ seq-queue@^0.0.5:
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/seq-queue/-/seq-queue-0.0.5.tgz#d56812e1c017a6e4e7c3e3a37a1da6d78dd3c93e"
   integrity sha1-1WgS4cAXpuTnw+Ojeh2m143TyT4=
 
+sequelize-typescript@0.6.7:
+  version "0.6.7"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/sequelize-typescript/-/sequelize-typescript-0.6.7.tgz#372be979cbae060c554fdbaf2c2d8c93a0283303"
+  integrity sha1-NyvpecuuBgxVT9uvLC2Mk6AoMwM=
+  dependencies:
+    "@types/bluebird" "3.5.18"
+    "@types/node" "6.0.41"
+    "@types/sequelize" "4.27.24"
+    es6-shim "0.35.3"
+    glob "7.1.2"
+
+sequelize@4.44.4:
+  version "4.44.4"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/sequelize/-/sequelize-4.44.4.tgz#9607eaa3e59080d27d8b17481d2e449e87e58f18"
+  integrity sha1-lgfqo+WQgNJ9ixdIHS5Enofljxg=
+  dependencies:
+    bluebird "^3.5.0"
+    cls-bluebird "^2.1.0"
+    debug "^3.1.0"
+    depd "^1.1.0"
+    dottie "^2.0.0"
+    generic-pool "3.5.0"
+    inflection "1.12.0"
+    lodash "^4.17.1"
+    moment "^2.20.0"
+    moment-timezone "^0.5.14"
+    retry-as-promised "^2.3.2"
+    semver "^5.5.0"
+    terraformer-wkt-parser "^1.1.2"
+    toposort-class "^1.0.1"
+    uuid "^3.2.1"
+    validator "^10.4.0"
+    wkx "^0.4.1"
+
 serialize-javascript@^5.0.1:
   version "5.0.1"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/serialize-javascript/-/serialize-javascript-5.0.1.tgz#7886ec848049a462467a97d3d918ebb2aaf934f4"
@@ -6883,7 +7022,7 @@ shellwords@^0.1.1:
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha1-1rkYHBpI05cyTISHHvvPxz/AZUs=
 
-shimmer@1.2.1:
+shimmer@1.2.1, shimmer@^1.1.0:
   version "1.2.1"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/shimmer/-/shimmer-1.2.1.tgz#610859f7de327b587efebf501fb43117f9aff337"
   integrity sha1-YQhZ994ye1h+/r9QH7QxF/mv8zc=
@@ -7356,6 +7495,21 @@ terminal-link@^2.0.0:
     ansi-escapes "^4.2.1"
     supports-hyperlinks "^2.0.0"
 
+terraformer-wkt-parser@^1.1.2:
+  version "1.2.1"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/terraformer-wkt-parser/-/terraformer-wkt-parser-1.2.1.tgz#8041e2aeb0c9f2b4cbbec8ec2c5c00c45ddfee02"
+  integrity sha1-gEHirrDJ8rTLvsjsLFwAxF3f7gI=
+  dependencies:
+    "@types/geojson" "^1.0.0"
+    terraformer "~1.0.5"
+
+terraformer@~1.0.5:
+  version "1.0.12"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/terraformer/-/terraformer-1.0.12.tgz#39e08f9c753606421acce02e122440c72dfa12d3"
+  integrity sha1-OeCPnHU2BkIazOAuEiRAxy36EtM=
+  optionalDependencies:
+    "@types/geojson" "^7946.0.0 || ^1.0.0"
+
 terser-webpack-plugin@^5.1.1:
   version "5.1.3"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/terser-webpack-plugin/-/terser-webpack-plugin-5.1.3.tgz#30033e955ca28b55664f1e4b30a1347e61aa23af"
@@ -7478,6 +7632,11 @@ toidentifier@1.0.0:
   version "1.0.0"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha1-fhvjRw8ed5SLxD2Uo8j013UrpVM=
+
+toposort-class@^1.0.1:
+  version "1.0.1"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/toposort-class/-/toposort-class-1.0.1.tgz#7ffd1f78c8be28c3ba45cd4e1a3f5ee193bd9988"
+  integrity sha1-f/0feMi+KMO6Rc1OGj9e4ZO9mYg=
 
 tough-cookie@^4.0.0:
   version "4.0.0"
@@ -7834,6 +7993,11 @@ uuid@8.3.2, uuid@^8.3.0:
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha1-gNW1ztJxu5r2xEXyGhoExgbO++I=
 
+uuid@^3.2.1:
+  version "3.4.0"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
+  integrity sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4=
+
 v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
@@ -7855,6 +8019,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+validator@^10.4.0:
+  version "10.11.0"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/validator/-/validator-10.11.0.tgz#003108ea6e9a9874d31ccc9e5006856ccd76b228"
+  integrity sha1-ADEI6m6amHTTHMyeUAaFbM12sig=
 
 validator@^13.5.2:
   version "13.6.0"
@@ -8069,6 +8238,13 @@ winston@3.3.3:
     stack-trace "0.0.x"
     triple-beam "^1.3.0"
     winston-transport "^4.4.0"
+
+wkx@^0.4.1:
+  version "0.4.8"
+  resolved "https://hqo.jfrog.io/artifactory/api/npm/npm/wkx/-/wkx-0.4.8.tgz#a092cf088d112683fdc7182fd31493b2c5820003"
+  integrity sha1-oJLPCI0RJoP9xxgv0xSTssWCAAM=
+  dependencies:
+    "@types/node" "*"
 
 word-wrap@^1.2.3, word-wrap@~1.2.3:
   version "1.2.3"

@@ -14,7 +14,7 @@ setupTracer();
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
-    bodyParser: false,
+    bodyParser: true,
   });
 
   app.use(compression());
