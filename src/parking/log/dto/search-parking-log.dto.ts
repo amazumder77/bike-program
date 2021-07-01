@@ -1,15 +1,16 @@
 import { TransformDate } from '@hqo/shared-modules/dist';
 import { IsOptional, IsString, IsDate } from 'class-validator';
+import { TransformStringToArray } from '../../../shared/decorators/transform-string-to-array';
 import PaginatedParamsDto from '../../../shared/pagination/paginated-params.dto';
 
 export class SearchParkingLogQueryDto extends PaginatedParamsDto {
-  @IsString()
+  @TransformStringToArray()
   @IsOptional()
-  building_id?: number;
+  building_ids?: Array<string>;
 
-  @IsString()
+  @TransformStringToArray()
   @IsOptional()
-  biker_registration_id?: number;
+  biker_registration_ids?: Array<string>;
 
   @IsDate()
   @TransformDate()

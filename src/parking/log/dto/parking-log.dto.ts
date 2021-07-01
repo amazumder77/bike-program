@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsNumber, IsDate, IsOptional } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsDate, IsOptional, IsString } from 'class-validator';
 import { TransformDate } from '../../../../../../projects/helix/src/shared/decorators/transform-date';
 
 export class ParkingLogDto {
@@ -16,14 +16,12 @@ export class ParkingLogDto {
   biker_registration_id: number;
 
   @ApiProperty()
-  @TransformDate()
-  @IsDate()
+  @IsString()
   @IsOptional()
-  entry_time?: Date;
+  entry_time?: string;
 
   @ApiProperty()
-  @TransformDate()
-  @IsDate()
+  @IsString()
   @IsOptional()
-  exit_time?: Date;
+  exit_time?: string;
 }

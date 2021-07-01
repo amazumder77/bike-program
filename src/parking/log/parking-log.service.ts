@@ -30,8 +30,8 @@ export class ParkingLogService {
     const [parkings, total]: [Array<ParkingLog>, number] =
       await this.parkingLogRepository.findAndCount({
         where: {
-          building_id: In([query.building_id]),
-          biker_registration_id: In([query.building_id]),
+          building_id: In(query.building_ids ?? []),
+          biker_registration_id: In(query.building_ids ?? []),
           // entry_time: {
           //   $between: [query.entry_start_date, query.entry_end_date],
           // },

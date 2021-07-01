@@ -15,10 +15,10 @@ export class ParkingLog {
   biker_registration_id: number;
 
   @Column()
-  entry_time: Date;
+  entry_time: string;
 
   @Column()
-  exit_time: Date;
+  exit_time: string;
 
   @CreateDateColumn({ name: 'created_at' })
   created_at: Date;
