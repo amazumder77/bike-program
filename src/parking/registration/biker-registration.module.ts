@@ -6,10 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { BikerRegistrationController } from './biker-registration.controller';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([BikerRegistration]),
-  ],
+  imports: [TypeOrmModule.forFeature([BikerRegistration])],
   controllers: [BikerRegistrationController],
   providers: [BikerRegistrationService],
 })
-export class BikerRegistrationModule { }
+export class BikerRegistrationModule {}

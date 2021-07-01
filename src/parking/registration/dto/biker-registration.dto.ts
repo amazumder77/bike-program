@@ -2,6 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsString, IsOptional, IsNotEmpty, IsNumber, IsEmail, IsMobilePhone, IsBoolean } from 'class-validator';
 
 export class BikerRegistrationDto {
+  uuid: string;
 
   @ApiProperty()
   @IsString()
@@ -57,5 +58,4 @@ export class BikerRegistrationDto {
   @IsBoolean()
   @IsOptional()
   has_building_access?: boolean;
-
 }

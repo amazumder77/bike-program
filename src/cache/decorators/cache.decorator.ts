@@ -29,33 +29,33 @@ const getOptionValue = <T>(option: Option<T>, args: Array<unknown>): T => {
  * - if original method return `null` or `undefined` then cache won't be used
  * - the implementation doesn't use `exists` method to maintain atomicity
  */
-export const Cache = (options: CacheOptions) => (
-  target: unknown,
-  propertyKey: string | symbol,
-  descriptor: TypedPropertyDescriptor<
-    (...args: Array<unknown>) => Promise<unknown>
-  >,
-): void => {
-  if (typeof descriptor.value !== 'function') {
-    throw new Error(`${Cache.name} decorator must be applied to a method`);
-  }
-
-  const originalMethod = descriptor.value;
-
-  descriptor.value = async function findDescriptor(...args) {
-    const cacheKey = getOptionValue(options.key, args);
-    const cacheTtl = getOptionValue(options.ttl, args);
-
-    const cachedValue = await CacheService.instance.get(cacheKey);
-    if (cachedValue !== null && cachedValue !== undefined) {
-      return cachedValue;
+export const Cache =
+  (options: CacheOptions) =>
+  (
+    target: unknown,
+    propertyKey: string | symbol,
+    descriptor: TypedPropertyDescriptor<(...args: Array<unknown>) => Promise<unknown>>,
+  ): void => {
+    if (typeof descriptor.value !== 'function') {
+      throw new Error(`${Cache.name} decorator must be applied to a method`);
     }
 
-    const freshValue = await originalMethod.apply(this, args);
-    if (freshValue !== null && freshValue !== undefined) {
-      await CacheService.instance.set(cacheKey, freshValue, cacheTtl);
-    }
+    const originalMethod = descriptor.value;
 
-    return freshValue;
+    descriptor.value = async function findDescriptor(...args) {
+      const cacheKey = getOptionValue(options.key, args);
+      const cacheTtl = getOptionValue(options.ttl, args);
+
+      const cachedValue = await CacheService.instance.get(cacheKey);
+      if (cachedValue !== null && cachedValue !== undefined) {
+        return cachedValue;
+      }
+
+      const freshValue = await originalMethod.apply(this, args);
+      if (freshValue !== null && freshValue !== undefined) {
+        await CacheService.instance.set(cacheKey, freshValue, cacheTtl);
+      }
+
+      return freshValue;
+    };
   };
-};

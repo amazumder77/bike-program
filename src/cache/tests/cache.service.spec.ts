@@ -15,10 +15,7 @@ describe('CacheService', () => {
 
   beforeEach(async () => {
     const module = await Test.createTestingModule({
-      providers: [
-        CacheService,
-        { provide: REDIS_CLIENT_TOKEN, useValue: redis },
-      ],
+      providers: [CacheService, { provide: REDIS_CLIENT_TOKEN, useValue: redis }],
     }).compile();
 
     service = module.get(CacheService);
@@ -100,13 +97,7 @@ describe('CacheService', () => {
       redis.set.mockReturnValueOnce(value);
 
       expect(await service.set(key, value, 10)).toEqual(value);
-      expect(redis.set).toHaveBeenNthCalledWith(
-        1,
-        key,
-        JSON.stringify(value),
-        'EX',
-        10,
-      );
+      expect(redis.set).toHaveBeenNthCalledWith(1, key, JSON.stringify(value), 'EX', 10);
     });
 
     it('sets an item in the cache without expiration', async () => {

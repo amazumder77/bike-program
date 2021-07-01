@@ -11,4 +11,4 @@ import { Global, Module } from '@nestjs/common';
   ],
   exports: [EnvironmentService],
 })
-export default class EnvironmentModule { }
+export default class EnvironmentModule {}

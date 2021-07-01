@@ -45,7 +45,6 @@ async function bootstrap() {
       .setVersion('0.1.0')
       .build();
 
-
     const document = SwaggerModule.createDocument(app, options);
     SwaggerModule.setup('api', app, document);
     SwaggerModule.setup('explorer', app, document);

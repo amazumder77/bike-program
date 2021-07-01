@@ -244,9 +244,9 @@ describe('ContentService', () => {
       };
       contentRepositoryMock.findOne.mockReturnValueOnce(contentEntity);
 
-      await expect(contentService.registerBiker('testRequest' as unknown as Request, contentDataWithUuid)).rejects.toThrow(
-        BadRequestException,
-      );
+      await expect(
+        contentService.registerBiker('testRequest' as unknown as Request, contentDataWithUuid),
+      ).rejects.toThrow(BadRequestException);
 
       expect(contentRepositoryMock.findOne).toHaveBeenCalledTimes(1);
       expect(contentRepositoryMock.findOne).toHaveBeenCalledWith({ uuid: contentUuid });

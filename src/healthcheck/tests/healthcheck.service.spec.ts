@@ -10,10 +10,7 @@ describe('HealthCheck Service', () => {
 
   beforeAll(async () => {
     const module = await Test.createTestingModule({
-      providers: [
-        HealthCheckService,
-        { provide: CacheService, useValue: cacheService },
-      ],
+      providers: [HealthCheckService, { provide: CacheService, useValue: cacheService }],
     }).compile();
 
     healthCheckService = module.get(HealthCheckService);

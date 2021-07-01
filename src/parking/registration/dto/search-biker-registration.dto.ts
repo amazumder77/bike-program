@@ -1,6 +1,5 @@
-import { IsOptional, IsString, IsNumber } from 'class-validator';
+import { IsOptional, IsString } from 'class-validator';
 import PaginatedParamsDto from '../../../shared/pagination/paginated-params.dto';
-
 
 export class SearchBikerRegistrationQueryDto extends PaginatedParamsDto {
   @IsString()
