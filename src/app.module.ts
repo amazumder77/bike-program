@@ -12,7 +12,7 @@ import DatabaseModule from './database/database.module';
 import EnvironmentModule from './environment/environment.module';
 import { TraceIDMiddleware } from './infrastructure/middlewares/trace-id-middleware';
 import { AuthMiddleware } from './infrastructure/middlewares/auth.middleware';
-import { BikerRegistrationModule } from './parking/registration/biker-registration.module';
+import { ParkingModule } from './parking/parking.module';
 
 @Module({
   imports: [
@@ -23,7 +23,7 @@ import { BikerRegistrationModule } from './parking/registration/biker-registrati
     AuthModule,
     DatabaseModule,
     EnvironmentModule,
-    BikerRegistrationModule,
+    ParkingModule,
   ],
   controllers: [AppController],
   providers: [AppService],
