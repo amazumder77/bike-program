@@ -13,7 +13,7 @@ import EnvironmentModule from './environment/environment.module';
 import { TraceIDMiddleware } from './infrastructure/middlewares/trace-id-middleware';
 import { AuthMiddleware } from './infrastructure/middlewares/auth.middleware';
 import { ParkingModule } from './parking/parking.module';
-import { EventModule } from './events/event.module';
+import { EventModule } from './event/event.module';
 
 @Module({
   imports: [
