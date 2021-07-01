@@ -7,7 +7,7 @@ import { SearchParkingLogRO, ParkingLogRO } from './interfaces/parking-log.inter
 
 @Controller('v1/parking-log')
 export class ParkingLogController {
-  constructor(private readonly bikerRegistrationService: ParkingLogService) { }
+  constructor(private readonly bikerRegistrationService: ParkingLogService) {}
 
   @Post()
   async registerBiker(@Body() parkingLogDto: ParkingLogDto): Promise<ParkingLogRO> {
@@ -21,10 +21,7 @@ export class ParkingLogController {
 
   @Put('/:uuid')
   @HttpCode(HttpStatus.OK)
-  async update(
-    @Param('uuid') uuid: string,
-    @Body() parkingLogDto: ParkingLogDto,
-  ): Promise<ParkingLogRO> {
+  async update(@Param('uuid') uuid: string, @Body() parkingLogDto: ParkingLogDto): Promise<ParkingLogRO> {
     return await this.bikerRegistrationService.update(uuid, parkingLogDto);
   }
 

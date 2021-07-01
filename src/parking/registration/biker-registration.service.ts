@@ -14,7 +14,7 @@ export class BikerRegistrationService {
   constructor(
     @InjectRepository(BikerRegistration)
     private readonly bikerRegistrationRepository: BikerRegistrationRepository,
-  ) { }
+  ) {}
 
   async registerBiker(bikerRegistrationDto: BikerRegistrationDto): Promise<BikerRegistrationRO> {
     const { uuid } = await this.bikerRegistrationRepository.save(bikerRegistrationDto);

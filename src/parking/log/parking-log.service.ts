@@ -15,7 +15,7 @@ export class ParkingLogService {
   constructor(
     @InjectRepository(ParkingLog)
     private readonly parkingLogRepository: ParkingLogRepository,
-  ) { }
+  ) {}
 
   async createParkingLog(parkingLogDto: ParkingLogDto): Promise<ParkingLogRO> {
     const { uuid } = await this.parkingLogRepository.save(parkingLogDto);
@@ -28,25 +28,26 @@ export class ParkingLogService {
   }
 
   async search(query: SearchParkingLogQueryDto): Promise<PaginatedResponse<SearchParkingLogRO>> {
-    const [parkings, total]: [Array<ParkingLog>, number] =
-      await this.parkingLogRepository.findAndCount({
-        where: {
-          ...(query?.building_ids && { building_id: In([...query.building_ids]) }),
-          ...(query?.biker_registration_ids && { biker_registration_id: In([...query.biker_registration_ids]) }),
-          ...(query?.entry_start_date && query.entry_end_date && {
+    const [parkings, total]: [Array<ParkingLog>, number] = await this.parkingLogRepository.findAndCount({
+      where: {
+        ...(query?.building_ids && { building_id: In([...query.building_ids]) }),
+        ...(query?.biker_registration_ids && { biker_registration_id: In([...query.biker_registration_ids]) }),
+        ...(query?.entry_start_date &&
+          query.entry_end_date && {
             entry_time: Between(
               moment.utc(query.entry_start_date).startOf('day').toDate(),
               moment.utc(query.entry_end_date).endOf('day').toDate(),
             ),
           }),
-          ...(query?.exit_start_date && query.exit_end_date && {
+        ...(query?.exit_start_date &&
+          query.exit_end_date && {
             exit_time: Between(
               moment.utc(query.exit_start_date).startOf('day').toDate(),
               moment.utc(query.exit_end_date).endOf('day').toDate(),
             ),
           }),
-        },
-      });
+      },
+    });
     return {
       parkings: parkings,
       count: parkings?.length,
@@ -56,8 +57,9 @@ export class ParkingLogService {
   }
 
   async getParkingLogByUuid(uuid: string): Promise<ParkingLogRO> {
-    const { building_id, biker_registration_id, entry_time, exit_time } =
-      await this.parkingLogRepository.findOne({ uuid });
+    const { building_id, biker_registration_id, entry_time, exit_time } = await this.parkingLogRepository.findOne({
+      uuid,
+    });
     return {
       parking: {
         building_id,

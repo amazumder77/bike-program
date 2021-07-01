@@ -13,4 +13,4 @@ import { ParkingLogService } from './log/parking-log.service';
   controllers: [BikerRegistrationController, ParkingLogController],
   providers: [BikerRegistrationService, ParkingLogService],
 })
-export class ParkingModule { }
+export class ParkingModule {}

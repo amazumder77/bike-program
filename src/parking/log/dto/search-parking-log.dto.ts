@@ -1,5 +1,5 @@
 import { TransformDate } from '@hqo/shared-modules/dist';
-import { IsOptional, IsString, IsDate } from 'class-validator';
+import { IsOptional, IsDate } from 'class-validator';
 import { TransformStringToArray } from '../../../shared/decorators/transform-string-to-array';
 import PaginatedParamsDto from '../../../shared/pagination/paginated-params.dto';
 

@@ -1,6 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsNumber, IsDate, IsOptional, IsString } from 'class-validator';
-import { TransformDate } from '../../../../../../projects/helix/src/shared/decorators/transform-date';
+import { IsNotEmpty, IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class ParkingLogDto {
   uuid?: string;
