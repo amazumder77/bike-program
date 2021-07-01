@@ -6,7 +6,7 @@ export async function up(knex: Knex): Promise<void> {
     table.uuid('uuid').unique().notNullable().comment('Globally unique ID.');
     table.integer('building_id').notNullable().comment('Building ID where bike will be parked');
     table.integer('biker_registration_id').notNullable().comment('Foreign Key with Biker registration table.');
-    table.string('entry_time').defaultTo(knex.fn.now()).comment('Time bike has entered the parking lot');
+    table.string('entry_time').comment('Time bike has entered the parking lot');
     table.string('exit_time').comment('Time bike has exited the parking lot');
     table.timestamp('created_at').defaultTo(knex.fn.now()).comment('Time this record was created in UTC.');
     table.timestamp('updated_at').defaultTo(knex.fn.now()).comment('Time this record was updated in UTC.');

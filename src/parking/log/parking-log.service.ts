@@ -5,9 +5,10 @@ import { ParkingLogRepository } from './parking-log.repository';
 
 import { SearchParkingLogQueryDto } from './dto/search-parking-log.dto';
 import { PaginatedResponse } from '../../shared/pagination/paginated-response.interface';
-import { In } from 'typeorm';
+import { In, Between } from 'typeorm';
 import { ParkingLogDto } from './dto/parking-log.dto';
 import { SearchParkingLogRO, ParkingLogRO } from './interfaces/parking-log.interface';
+import * as moment from 'moment';
 
 @Injectable()
 export class ParkingLogService {
@@ -30,14 +31,20 @@ export class ParkingLogService {
     const [parkings, total]: [Array<ParkingLog>, number] =
       await this.parkingLogRepository.findAndCount({
         where: {
-          building_id: In(query.building_ids ?? []),
-          biker_registration_id: In(query.building_ids ?? []),
-          // entry_time: {
-          //   $between: [query.entry_start_date, query.entry_end_date],
-          // },
-          // exit_time: {
-          //   $between: [query.exit_start_date, query.exit_end_date],
-          // },
+          ...(query?.building_ids && { building_id: In([...query.building_ids]) }),
+          ...(query?.biker_registration_ids && { biker_registration_id: In([...query.biker_registration_ids]) }),
+          ...(query?.entry_start_date && query.entry_end_date && {
+            entry_time: Between(
+              moment.utc(query.entry_start_date).startOf('day').toDate(),
+              moment.utc(query.entry_end_date).endOf('day').toDate(),
+            ),
+          }),
+          ...(query?.exit_start_date && query.exit_end_date && {
+            exit_time: Between(
+              moment.utc(query.exit_start_date).startOf('day').toDate(),
+              moment.utc(query.exit_end_date).endOf('day').toDate(),
+            ),
+          }),
         },
       });
     return {
