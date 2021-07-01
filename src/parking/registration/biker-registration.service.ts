@@ -5,7 +5,7 @@ import { BikerRegistrationRepository } from './biker-registration.repository';
 
 import { SearchBikerRegistrationQueryDto } from './dto/search-biker-registration.dto';
 import { PaginatedResponse } from '../../shared/pagination/paginated-response.interface';
-import { Like } from 'typeorm';
+import { Like, In } from 'typeorm';
 import { BikerRegistrationDto } from './dto/biker-registration.dto';
 import { BikerRegistrationRO, SearchBikerRegistrationRO } from './interfaces/biker-registration.interface';
 
@@ -14,7 +14,7 @@ export class BikerRegistrationService {
   constructor(
     @InjectRepository(BikerRegistration)
     private readonly bikerRegistrationRepository: BikerRegistrationRepository,
-  ) {}
+  ) { }
 
   async registerBiker(bikerRegistrationDto: BikerRegistrationDto): Promise<BikerRegistrationRO> {
     const { uuid } = await this.bikerRegistrationRepository.save(bikerRegistrationDto);
@@ -30,10 +30,10 @@ export class BikerRegistrationService {
     const [biker_registrations, total]: [Array<BikerRegistration>, number] =
       await this.bikerRegistrationRepository.findAndCount({
         where: {
-          first_name: Like(`%${query.first_name ?? ''}%`),
-          last_name: Like(`%${query.last_name ?? ''}%`),
-          phone: Like(`%${query.phone ?? ''}%`),
-          building_id: Like(`%${query.building_id ?? ''}%`),
+          ...(query?.first_name && { first_name: Like(`%${query.first_name}%`) }),
+          ...(query?.last_name && { last_name: Like(`%${query.last_name}%`) }),
+          ...(query?.phone && { phone: Like(`%${query.phone}%`) }),
+          ...(query?.building_ids && { building_id: In([...query.building_ids]) }),
         },
       });
     return {

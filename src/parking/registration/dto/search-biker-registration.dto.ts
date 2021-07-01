@@ -1,5 +1,6 @@
 import { IsOptional, IsString } from 'class-validator';
 import PaginatedParamsDto from '../../../shared/pagination/paginated-params.dto';
+import { TransformStringToArray } from '../../../../../../projects/helix/src/shared/decorators/transform-string-to-array';
 
 export class SearchBikerRegistrationQueryDto extends PaginatedParamsDto {
   @IsString()
@@ -14,7 +15,7 @@ export class SearchBikerRegistrationQueryDto extends PaginatedParamsDto {
   @IsOptional()
   phone?: string;
 
-  @IsString()
+  @TransformStringToArray()
   @IsOptional()
-  building_id?: string;
+  building_ids?: Array<string>;
 }
